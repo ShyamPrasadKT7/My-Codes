@@ -12,7 +12,7 @@ sap.ui.define([
 
             },
             onSubmit:function(){
-
+//test push to btp
                 var oData = { VATCode : "sVATCode" };
                 var oViewModel = new sap.ui.model.json.JSONModel(oData);
             this.getOwnerComponent().setModel(oViewModel, "transferView");
