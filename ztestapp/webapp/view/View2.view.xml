@@ -1,0 +1,59 @@
+<mvc:View controllerName="ztestapp.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core">
+    	<Page
+		id="page2"
+		showHeader="true" showNavButton="true" navButtonPress="navBack">
+        <VBox  id ="Vbox12" class="sapUiSmallMargin">
+		<f:SimpleForm id="SimpleFormChange354wide2"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			title="Address"
+			labelSpanXL="4"
+			labelSpanL="3"
+			labelSpanM="4"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="0"
+			emptySpanL="4"
+			emptySpanM="0"
+			emptySpanS="0"
+			columnsXL="2"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false">
+			<f:content>
+				<Label id="label12" text="Full name of the contact" />
+				<Input id="name2" value="{SupplierName}" />
+				<Label id="label22" text="Street and number where the contact is located" />
+				<Input value="{Street}" id="input12">
+				</Input>
+				<Input value="{HouseNumber}" id="input22">
+					<layoutData>
+						<l:GridData span="XL1 L2 M2 S4" id="dom52" />
+					</layoutData>
+				</Input>
+				<Label text="ZIP Code and City" id="dom62" />
+				<Input value="{ZIPCode}" id="dom7">
+					<layoutData>
+						<l:GridData span="XL1 L2 M2 S4"  id="dom82"/>
+					</layoutData>
+				</Input>
+				<Input value="{City}"  id="dom92"/>
+				<Label text="Country where the contact is located" id="dom102" />
+				<Select id="country" selectedKey="{Country}">
+					<items>
+						<core:Item text="England" key="England" id="dom142"/>
+						<core:Item text="Germany" key="Germany" id="dom112"/>
+						<core:Item text="USA" key="USA" id="dom132"/>
+					</items>
+				</Select>
+                <Button id="button12" text="Submit" press="onSubmit"/>
+			</f:content>
+		</f:SimpleForm>
+	</VBox>
+		
+	</Page>
+</mvc:View>
